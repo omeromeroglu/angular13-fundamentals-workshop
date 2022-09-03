@@ -13,12 +13,31 @@ export class CoursesComponent implements OnInit {
       description: 'Learn the fundamentals of Angular 13',
       percentComplete: 26,
       favorite: true
+    },
+    {
+      id: 2,
+      title: 'React',
+      description: 'Learn the React ComponentFixture',
+      percentComplete: 66,
+      favorite: true
     }
   ];
+
+  selectedCourse= null
 
   constructor() { }
 
   ngOnInit(): void {
   }
+
+  selectCourse(course){
+    this.selectedCourse= course;
+  }
+
+  deleteCourse(courseId){
+    console.log(courseId);
+  }
+
+
 
 }
